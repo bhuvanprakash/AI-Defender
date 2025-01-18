@@ -1,0 +1,27 @@
+# Node.js Dependencies
+node_modules/
+.next/
+*.log
+
+# Python Dependencies
+venv/
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+.env.local
+
+# Database Files
+*.db
+*.sqlite
+
+# Compiled Files
+*.o
+*.so
+*.dll
+
+# IDE/Editor Configs
+.vscode/
+.idea/
+
