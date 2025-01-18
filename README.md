@@ -1,7 +1,7 @@
 # AI-Defender - AI-Powered Cybersecurity Solution
 
 ## 🚀 Overview
-AI-Defender is a fully MIT-Licensed AI-driven cybersecurity platform designed to detect, mitigate, and prevent cyber threats using **Graph Neural Networks (GNNs) + Reinforcement Learning (RL)**.
+AI-Defender is a fully closed-Licensed AI-driven cybersecurity platform designed to detect, mitigate, and prevent cyber threats using **Graph Neural Networks (GNNs) + Reinforcement Learning (RL)**.
 
 ## 📂 Project Structure
 - **Frontend:** SecureDash UI (React + Next.js)
