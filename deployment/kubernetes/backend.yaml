@@ -1,0 +1,36 @@
+# Deploy FastAPI Backend
+# AI-Defender/deployment/kubernetes/backend.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-defender-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-defender-backend
+  template:
+    metadata:
+      labels:
+        app: ai-defender-backend
+    spec:
+      containers:
+        - name: backend
+          image: ai-defender-backend
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://defender_admin:SuperSecretPass@postgres/ai_defender"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  ports:
+    - port: 8000
+  selector:
+    app: ai-defender-backend

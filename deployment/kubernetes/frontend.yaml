@@ -1,0 +1,33 @@
+# Deploy FastAPI Backend
+# AI-Defender/deployment/kubernetes/frontend.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-defender-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-defender-frontend
+  template:
+    metadata:
+      labels:
+        app: ai-defender-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ai-defender-frontend
+          ports:
+            - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  ports:
+    - port: 3000
+  selector:
+    app: ai-defender-frontend
